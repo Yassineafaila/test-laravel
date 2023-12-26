@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/users', function () {
-    return view('yassine');
-    // return "yassine"
-    // return ["fname"=>"yassine","lname"=>"afaila"];
-
+Route::get("/products",function(){
+    return view("hello word");
 });
+Route::resource('products', ProductController::class);
+
