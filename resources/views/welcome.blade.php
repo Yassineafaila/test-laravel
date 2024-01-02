@@ -31,7 +31,9 @@
             @endif
 
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
-                <h2 class="text-white">laravel project highlight_file</h2>
+                <h2 class="text-white">CRUD App Product</h2>
+                <a href="{{route('products.index')}}" class="block">Liste des produits </a>
+                <a href="{{route('products.create')}}">Ajout d'un nouveau produit</a>
             </div>
         </div>
     </body>

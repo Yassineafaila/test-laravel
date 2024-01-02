@@ -24,17 +24,18 @@ class ProductController extends Controller
             $produit->detail = $request->detail; 
             $produit->save();
             //dd($produit);
-            return view('product.index'); 
+            return redirect()->route("products.index"); 
             
         }
+        public function destroy(Product $product) { $product->delete(); return redirect()->route('products.index'); }
         public function edit(Product $product) { 
             
-            return view('product.edit', compact('product'));
+            return view('products.edit', compact('product'));
          } 
          public function update(Request $request, Product $product) { 
             $product->name = $request->name; 
             $product->detail = $request->detail; 
             $product->save(); 
-            return view('product.index'); }
+            return redirect()->route("products.index"); }
     }
 
